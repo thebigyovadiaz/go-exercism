@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/thebigyovadiaz/go-exercism/src/isogram"
 	"github.com/thebigyovadiaz/go-exercism/src/leap"
 	scrabble "github.com/thebigyovadiaz/go-exercism/src/scrabble-score"
 )
@@ -14,4 +15,7 @@ func main() {
 	// Leap year exercise
 	leapYear := leap.IsLeapYear(1996)
 	fmt.Println("leap year:", leapYear)
+
+	isogram := isogram.IsIsogram("issogram")
+	fmt.Println("isogram:", isogram)
 }

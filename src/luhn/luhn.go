@@ -6,21 +6,17 @@ import (
 )
 
 func Valid(id string) bool {
+	id = strings.ReplaceAll(id, " ", "")
+
 	if len(id) <= 1 {
-		return false
-	}
-
-	newId := strings.ReplaceAll(id, " ", "")
-
-	if len(newId) <= 1 {
 		return false
 	}
 
 	sum := 0
 	isSecond := false
 
-	for i := len(newId) - 1; i >= 0; i-- {
-		digit, err := strconv.Atoi(string(newId[i]))
+	for i := len(id) - 1; i >= 0; i-- {
+		digit, err := strconv.Atoi(string(id[i]))
 		if err != nil {
 			return false
 		}
